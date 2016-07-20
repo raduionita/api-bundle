@@ -1,0 +1,4 @@
+raducorp_api_rest:
+    path:     /api/rest/:resource
+    defaults: { _controller: RaducorpApiBundle:Resource:get }
+    methods: [GET]
