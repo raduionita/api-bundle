@@ -1,4 +1,22 @@
 raducorp_api_rest:
-    path:     /api/rest/:resource
-    defaults: { _controller: RaducorpApiBundle:Resource:get }
+    path:     /rest/:resource
+    defaults: { _controller: RaducorpApiBundle:Rest:fetch }
+    methods: [GET]
+raducorp_api_rest:
+    path:     /rest/:resource
+    defaults: { _controller: RaducorpApiBundle:Rest:save }
+    methods: [POST, PUT]
+raducorp_api_rest:
+    path:     /rest/:resource
+    defaults: { _controller: RaducorpApiBundle:Rest:remove }
+    methods: [DELETE]
+
+raducorp_api_soap:
+    path:     /soap.wsdl
+    defaults: { _controller: RaducorpApiBundle:Soap:wsdl }
+    methods: [GET]
+
+raducorp_api_soap:
+    path:     /soap/:action
+    defaults: { _controller: RaducorpApiBundle:Soap:run }
     methods: [GET]

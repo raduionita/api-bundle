@@ -1,2 +1,2 @@
-# api-bundle
+# API Bundle
 REST + SOAP API Bundle

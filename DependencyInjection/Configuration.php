@@ -18,11 +18,20 @@ class Configuration implements ConfigurationInterface
     public function getConfigTreeBuilder()
     {
         $treeBuilder = new TreeBuilder();
-        $rootNode = $treeBuilder->root('raducorp_api');
+        $rootNode = $treeBuilder->root('raducorp');
 
-        // Here you should define the parameters that are allowed to
-        // configure your bundle. See the documentation linked above for
-        // more information on that topic.
+        /*
+        raducorp:
+            api:
+                # api.site.com/soap/:action
+                soap:
+                    - { class: Namespace\Class }
+                    - { service: @some.service }
+                # api.site.com/rest/:resource
+                rest:
+                    - { resource: Namespace\Resource, methods: [GET, POST, PUT] }
+                    - { resource: @some.service, methods: [GET, POST, PUT, DELETE, PATCH] }
+        */
 
         return $treeBuilder;
     }

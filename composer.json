@@ -1,0 +1,31 @@
+{
+    "name" : "raducorp/apibundle",
+    "description" : "REST + SOAP API Bundle",
+    "type" : "symfony-bundle",
+    "authors" : [{
+        "name" : "Radu Ionita",
+        "email" : "ionita.radu.ionut@gmail.com"
+    }],
+    "keywords" : [
+        "api rest soap bundle"
+    ],
+    "license" : [
+        "MIT"
+    ],
+    "require" : {
+        "zendframework/zend-soap" : "2.6.*"
+    },
+    "autoload" : {
+        "psr-0" : {
+            "Raducorp\\ApiBundle" : ""
+        }
+    },
+    "target-dir" : "Raducorp/ApiBundle",
+    "repositories" : [{
+    }],
+    "extra" : {
+        "branch-alias" : {
+            "dev-master" : "0.0.1-dev"
+        }
+    }
+}
